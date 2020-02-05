@@ -1,5 +1,5 @@
 import unittest
-from .alg1 import solve
+from alg_lab1.alg1 import solve
 
 
 class Test(unittest.TestCase):
