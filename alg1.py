@@ -25,10 +25,9 @@ def solve(flat1, flat2, dot):
 	n2 = take_norm_vector(flat2)
 	# multiply them to get normal vector for our flat
 	norm_vector = list(np.cross(n1, n2))
-	result = '{}(x - {}) + {}(y - {}) + {}(z - {}) = 0'.format(
-		norm_vector[0], dot[0], norm_vector[1], dot[1], norm_vector[2], dot[2])
-	# make result looks better
-	result = result.replace('- -', '+ ')
-	result = result.replace('+ -', '- ')
-	return result
+	d = 0
+	for i in range(len(norm_vector)):
+		d += norm_vector[i] * -1 * dot[i]
+	result = norm_vector + [d,]
 
+	return result
