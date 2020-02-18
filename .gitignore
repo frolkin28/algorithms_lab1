@@ -4,6 +4,7 @@
 .idea
 __pycache__/
 
+*.pyc
 # Editor-based Rest Client
 .idea/httpRequests
 
